@@ -4,10 +4,150 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Groww</title>
-    
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="stocks.css">
 </head>
 <body>
-    <h1>Welcome</h1>
+    <div>
+        <!-- Navbar starts  -->
+        <div id="nav-bar" class="margin-mid">
+            <div id="groww-logo">
+                <img src="https://assets-netstorage.groww.in/web-assets/billion_groww_desktop/prod/build/client/images/logo-dark-groww.83f43714.svg" alt="Groww image">
+            </div>
+            <div id="after_logo">
+                <p style="color:#00d09c ;">Explore</p>
+                <p>Investments</p>
+            </div>
+            <div id="search">
+                <img src="https://cdn-icons.flaticon.com/png/128/5948/premium/5948534.png?token=exp=1639478138~hmac=9a3448d12c73ff6effec0859d05105ba" alt="">
+                <input type="text" placeholder="What you are looking for today?" id="">
+            </div>
+            <div id="three-div">
+                <img src="https://cdn-icons-png.flaticon.com/128/3602/3602145.png" alt="">
+                <img src="https://img.icons8.com/ios/2x/wallet.png" alt="">
+                <img src="https://cdn-icons.flaticon.com/png/128/2252/premium/2252291.png?token=exp=1639483415~hmac=1364994abc22dcae9ce2f747eba82ff2" alt="">
+            </div>
+        </div>
+        <!--         
+        <!-- <div id="navbar-main">
+
+        </div> -->
+         -->
+
+        <!-- NavBar End -->
+
+        <div id="Select_funds" class="margin-mid">
+            <div>
+                <button id="button_1" onclick="changecolor1()">Stocks</button>
+            </div>
+            <div>
+                <button id="button_2" onclick="changecolor2()">Mutual Funds</button>
+            </div>
+            <div>
+                <button id="button_3" onclick="changecolor3()">Fixed Deposit</button>
+            </div>
+            <div>
+                <button id="button_4" onclick="changecolor4()">US Stocks</button>
+            </div>
+        </div>
+        <hr/>
+
+        <div class="margin-mid">
+            
+            <div > 
+                <div class="sub-bord">
+                    <h3>Popular Funds</h3>
+                    <a href="MutualFunds.html">
+                        <p>SEE ALL MUTUAL FUNDS</p>
+                    </a>
+                </div>
+
+                <div id="four_box">
+                    <div class="box shadow" >
+                        <div class="box_img">
+                            <img src="https://groww.in/images/partners/icici_groww.svg">
+                        </div> 
+                        <div>
+                            <p>ICICI Prudential Technology Direct Plan</p>
+                            <p>42.1% (3Y)</p>
+                        </div>
+                    </div>
+                    <div class="box shadow" style="margin-right: 10px;">
+                        <div class="box_img">
+                            <img src="https://groww.in/images/partners/axis_groww.svg">
+                        </div> 
+                        <div>
+                            <p>Axis Small Cap Fund Direct Growth</p>
+                            <p>34.2% (3Y)</p>
+                        </div>
+                    </div>
+                    <div class="box shadow" >
+                        <div class="box_img">
+                            <img src="https://groww.in/images/partners/ppfas_groww.svg">
+                        </div> 
+                        <div>
+                            <p>Parag Pratikh Flexi Cap Fund Direct Growth</p>
+                            <p>42.1% (3Y)</p>
+                        </div>
+                    </div>
+                    <div class="box shadow" >
+                        <div class="box_img ">
+                            <img src="https://groww.in/images/partners/tata_groww.svg">
+                        </div> 
+                        <div>
+                            <p>Tata Digital India Fund Direct Growth</p>
+                            <p>42.1% (3Y)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bord">
+
+            </div>
+        </div>
+    </div>
 </body>
 </html>
+<script type="module">
+    
+    import navbar from "./components/Navbar.js";
+    console.log('navbar:', navbar);
+
+    let container = document.getElementById("navbar-main");
+    
+    container.innerHTML = navbar();
+    
+
+    function changecolor1(){
+        let button2 = document.querySelector("#button_1");
+        button2.style.color = "#00d09c";
+        button2.style.paddingBottom = "10px";
+        button2.style.borderBottom = "2px solid #00d09c";
+    }
+       
+    function changecolor2(){
+        let button2 = document.querySelector("#button_2");
+        button2.style.color = "#00d09c";
+        button2.style.paddingBottom = "10px";
+        button2.style.borderBottom = "2px solid #00d09c";
+    }
+
+    function changecolor3(){
+        let button2 = document.querySelector("#button_3");
+        button2.style.color = "#00d09c";
+        button2.style.paddingBottom = "10px";
+        button2.style.borderBottom = "2px solid #00d09c";
+    }
+    
+    function changecolor4(){
+        let button2 = document.querySelector("#button_4");
+        button2.style.color = "#00d09c";
+        button2.style.paddingBottom = "10px";
+        button2.style.borderBottom = "2px solid #00d09c";
+    }
+</script>
