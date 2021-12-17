@@ -4,8 +4,8 @@ let underLineArr=Array.from(clickTOchange)
 underLineArr[0].style.borderBottom="2px solid #00d09c";
 
 let clicKtoChangeTypeOfshareInterest=document.getElementsByClassName("clicKtoChangeTypeOfshareInterest")
-let arr=["../Images/fd.png","../Images/fund.png","../Images/stock.png","../Images/usstock.png"]
-let rateArr=["../Images/r1.png","../Images/r2.png","../Images/r3.png","../Images/r4.png"]
+let arr=["../mainpage/fd.png","../mainpage/fund.png","../mainpage/stock.png","../mainpage/usstock.png"]
+let rateArr=["../mainpage/r1.png","../mainpage/r2.png","../mainpage/r3.png","../mainpage/r4.png"]
 clicKtoChangeTypeOfshare.src=arr[0]
 Array.from(clicKtoChangeTypeOfshareInterest)[0].src=rateArr[0]
 //console.log(clicKtoChangeTypeOfshareInterest[0]);
