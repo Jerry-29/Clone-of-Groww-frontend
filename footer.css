@@ -1,8 +1,14 @@
 body {
   max-width: 100%;
+  /* padding: 0%;
+  margin: 0%; */
+  font-family: Roboto, system-ui;
+ 
+  letter-spacing: 0.2px;
+  font-weight: 500;
 }
 .footerDiv {
-  width: 1490px;
+  width: 100%;
   /* height: auto; */
   /* position: relative; */
   right: 22rem;
@@ -10,7 +16,7 @@ body {
   /* border: 1px solid #1e2232; */
   background-color: #1e2232;
   /* margin-top: -140px; */
-  border: 1px solid red;
+  border: 1px solid transparent;
   /* margin-right: 35; */
 }
 .footer {
@@ -34,6 +40,8 @@ body {
   margin-top: 18px;
   font-size: 16px;
   line-height: 25px;
+  font-size: 12px;
+ 
 }
 #footer13 a {
   color: white;
@@ -68,7 +76,8 @@ body {
   display: block;
   color: white;
   text-decoration: none;
-  font-weight: 100;
+  font-weight: 500;
+  font-size: 12px;
 }
 #footer31 {
   color: white;
@@ -79,7 +88,8 @@ body {
   display: block;
   color: white;
   text-decoration: none;
-  font-weight: 100;
+  font-weight: 500;
+  font-size: 12px;
 }
 #footer41 {
   color: white;
@@ -90,7 +100,8 @@ body {
   display: block;
   color: white;
   text-decoration: none;
-  font-weight: 100;
+  font-weight: 500;
+  font-size: 12px;
 }
 #footer5 {
   width: 80%;
@@ -128,4 +139,5 @@ body {
 #footer62 > div > img {
   width: 200px;
   height: 60px;
+  cursor: pointer;
 }
