@@ -6,15 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            font-size: 13px !important;
+        }
         .sideBarMainDiv{
             position: fixed;
             z-index: 10000000000;
-            height: 500px;
+            height: 460px;
             width: 350px;
-           background-color: rgb(253, 253, 253);
+           background-color: #f7f6f7;
             right: 8%;
             top: 10%;
             border: 1px solid lightslategray;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 1%;
+        }
+        .bankpayDiv{
+        display: flex;
+        align-items: center;
+       gap: 4%;
+       background-color: white;
+       cursor: pointer;
+        }
+        .fundWatchList{
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+        }
+        .insideDiv{
+            display: flex;
+            align-items: center;
+       gap: 4%;
+       background-color: white;
+        }
+        .LoggedUser{
+            display: flex;
+            align-items: center;
+            gap: 10%;
+            margin-left: 5%;
+        }
+        .UserFirstLetter{
+            background-color: rgb(73, 43, 207);
+            padding: 80%;
+            padding-left: 100%;
+            padding-right: 100%;
+            border-radius: 50%;
+            color: whitesmoke;
+            font-size: 20px;
+        }
+        .userNameEmail p{
+            line-height: 6px;
+        }
+        .imgMargin{
+            margin-left: 4%;
+
+        }
+        .onhover:hover{
+            background-color: #f7f6f7;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -27,23 +78,49 @@
 
             <div class="LoggedUser">
 
+                <div class="UserFirstLetterDiv onhover"><span class="UserFirstLetter">G</span></div>
+                <div class="userNameEmail onhover"><p>Govind</p><p>Govindsingh0498@gmail.com</p></div>
             </div>
-            <div>
-                <svg class="profileIcon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"><g fill="none" stroke="var(--text)" stroke-width=".8" opacity=".7" transform="translate(1 1)"><polygon points="14.063 13.125 14.063 7.5 12.188 7.5 12.188 13.125 10.313 13.125 10.313 7.5 8.438 7.5 8.438 13.125 6.563 13.125 6.563 7.5 4.688 7.5 4.688 13.125 2.813 13.125 2.813 7.5 .938 7.5 .938 13.125 0 13.125 0 15 15 15 15 13.125"></polygon><path d="M14.4375006,2.90625012 L7.87500031,0.0937500037 C7.5937503,-2.77555756e-17 7.40625029,-2.77555756e-17 7.12500028,0.0937500037 L0.562500022,2.90625012 C0.187500007,3.00000012 0,3.37500013 0,3.75000015 L0,5.62500022 C0,6.18750025 0.375000015,6.56250026 0.937500037,6.56250026 L14.0625006,6.56250026 C14.6250006,6.56250026 15,6.18750025 15,5.62500022 L15,3.75000015 C15,3.37500013 14.8125006,3.00000012 14.4375006,2.90625012 Z M7.5000003,4.68750019 C6.93750028,4.68750019 6.56250026,4.31250011 6.56250026,3.75000015 C6.56250026,3.18750013 6.93750028,2.81250011 7.5000003,2.81250011 C8.06250026,2.81250011 8.43750034,3.18750013 8.43750034,3.75000015 C8.43750034,4.31250011 8.06250026,4.68750019 7.5000003,4.68750019 Z"></path></g></svg>
+            <div class="bankpayDiv onhover">
+               <img class="imgMargin" width="20px" height="20px" src="https://img.icons8.com/external-becris-lineal-becris/2x/external-bank-finance-investment-becris-lineal-becris.png" alt="">
                 <p>Bank & AutoPay</p>
             </div>
-            <div>
-                <div>
-                    <svg class="profileIcon" xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 18 15"><g fill="none" fill-rule="evenodd" opacity=".7" transform="translate(1 1)"><path fill="var(--primaryBg)" stroke="var(--text)" stroke-width=".89" d="M6.50056004,9.76996262e-15 L8.14528005,1.64472001 L14.6850001,1.64472001 C15.1288156,1.64472001 15.5073585,1.80788505 15.8206401,2.13422001 C16.1339217,2.46055498 16.2905601,2.84562446 16.2905601,3.28944002 L16.2905601,11.4347201 C16.2905601,11.8785356 16.1339217,12.2636051 15.8206401,12.5899401 C15.5073585,12.916275 15.1288156,13.0794401 14.6850001,13.0794401 L1.60556001,13.0794401 C1.16174445,13.0794401 0.783201571,12.916275 0.469920003,12.5899401 C0.156638434,12.2636051 -1.0658141e-14,11.8785356 -1.0658141e-14,11.4347201 L-1.0658141e-14,1.64472001 C-1.0658141e-14,1.20090445 0.156638434,0.81583497 0.469920003,0.489500003 C0.783201571,0.163165036 1.16174445,9.76996262e-15 1.60556001,9.76996262e-15 L6.50056004,9.76996262e-15 Z"></path><path fill="var(--text)" fill-rule="nonzero" d="M5.02493988,5.40334032 C5.16377988,5.40334032 5.28259488,5.35528032 5.38138488,5.25916032 C5.48017488,5.16304032 5.52956988,5.04556032 5.52956988,4.90672032 C5.52956988,4.76788033 5.48017488,4.64906533 5.38138488,4.55027533 C5.28259488,4.45148533 5.16377988,4.40209033 5.02493988,4.40209033 C4.88609989,4.40209033 4.76861989,4.45148533 4.67249989,4.55027533 C4.57637989,4.64906533 4.52831989,4.76788033 4.52831989,4.90672032 C4.52831989,5.04556032 4.57637989,5.16304032 4.67249989,5.25916032 C4.76861989,5.35528032 4.88609989,5.40334032 5.02493988,5.40334032 Z M10.7040298,5.23513032 L10.7040298,4.57831033 L6.02618987,4.57831033 L6.02618987,5.23513032 L10.7040298,5.23513032 Z M5.02493988,7.40584028 C5.16377988,7.40584028 5.28259488,7.35778028 5.38138488,7.26166029 C5.48017488,7.16554029 5.52956988,7.04806029 5.52956988,6.90922029 C5.52956988,6.77038029 5.48017488,6.6515653 5.38138488,6.5527753 C5.28259488,6.4539853 5.16377988,6.4045903 5.02493988,6.4045903 C4.88609989,6.4045903 4.76861989,6.4539853 4.67249989,6.5527753 C4.57637989,6.6515653 4.52831989,6.77038029 4.52831989,6.90922029 C4.52831989,7.04806029 4.57637989,7.16554029 4.67249989,7.26166029 C4.76861989,7.35778028 4.88609989,7.40584028 5.02493988,7.40584028 Z M10.7040298,7.23763029 L10.7040298,6.5808103 L6.02618987,6.5808103 L6.02618987,7.23763029 L10.7040298,7.23763029 Z M5.02493988,9.40834025 C5.15843988,9.40834025 5.27591988,9.35894525 5.37737988,9.26015525 C5.47883988,9.16136526 5.52956988,9.04522026 5.52956988,8.91172026 C5.52956988,8.77822026 5.48017488,8.66074026 5.38138488,8.55928027 C5.28259488,8.45782027 5.16377988,8.40709027 5.02493988,8.40709027 C4.88609989,8.40709027 4.76861989,8.45782027 4.67249989,8.55928027 C4.57637989,8.66074026 4.52831989,8.77822026 4.52831989,8.91172026 C4.52831989,9.04522026 4.57771489,9.16136526 4.67650489,9.26015525 C4.77529489,9.35894525 4.89143989,9.40834025 5.02493988,9.40834025 Z M10.7040298,9.24013025 L10.7040298,8.58331026 L6.02618987,8.58331026 L6.02618987,9.24013025 L10.7040298,9.24013025 Z"></path></g></svg>
+            <div class="fundWatchList">
+                <div class="insideDiv onhover">
+                  <img class="imgMargin" width="20px" src="https://img.icons8.com/ios/2x/initiate-money-transfer.png" alt="">
                <p>Import Funds</p>
                 </div>
-                <div>
-                    
+                <div class="insideDiv onhover">
+                    <img class="imgMargin" width="20px" src="https://th.bing.com/th/id/OIP.ZjA7l-AiWiI328I6JZL8_AHaHa?w=188&h=188&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="">
+                    <p>Watchlist</p>
                 </div>
             </div>
-
+            <div class="fundWatchList">
+                <div class="insideDiv onhover"><img class="imgMargin" width="20px" src="https://image.shutterstock.com/image-vector/application-form-vector-icon-260nw-787773907.jpg" alt=""><p>Orders</p></div>
+                <div class="insideDiv onhover"><img class="imgMargin" width="20px" src="https://th.bing.com/th/id/R.71f0484dc7ec33b1aab7c77f226adf74?rik=lSjn0bXT1DBSeg&riu=http%3a%2f%2f2.bp.blogspot.com%2f_KyMCCsOr4Bk%2fTMXtZzm4yyI%2fAAAAAAAAALM%2fMLyLQhkg1Dk%2fs1600%2fsip-logo-300px.gif&ehk=YYzwwv%2froXuOHc8Gu0%2fSnELQJbeyYCkWz8y2Uaz17ds%3d&risl=&pid=ImgRaw&r=0" alt=""><p>SIPs</p></div>
+            </div>
+            <div class="fundWatchList">
+                <div class="insideDiv onhover"><img class="imgMargin" width="20px" src="https://img.icons8.com/glyph-neue/2x/phone-disconnected.png" alt=""><p>Help & Support</p></div>
+                <div class="insideDiv onhover"><img class="imgMargin" width="20px" src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/2x/external-setting-basic-ui-elements-flatart-icons-outline-flatarticons.png" alt=""><p>Setting</p></div>
+            </div>
+                <div class="insideDiv onhover"><img class="imgMargin" width="20px" src="https://img.icons8.com/ios-filled/2x/do-not-disturb-2.png" alt=""><p class="mode">Dark Mode</p></div>
+                <div class="insideDiv onhover"><img class="imgMargin" width="20px" src="https://image.shutterstock.com/image-vector/login-icon-trendy-flat-style-260nw-414685642.jpg" alt=""><p>Log Out</p></div>
         </div>
 
     </div>
 </body>
 </html>
+<script>
+
+let mode=document.querySelector(".mode")
+let body=document.querySelector("HTML")
+let j=document.querySelector(".sideBar")
+console.log(body);
+mode.onclick=()=>{
+body.style.backgroundColor="black"
+body.style.color="white"
+j.style.backgroundColor="black"
+console.log("k");
+}
+
+</script>
