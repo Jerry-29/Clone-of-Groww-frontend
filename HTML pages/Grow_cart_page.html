@@ -4,136 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cart Page</title>
+    <link
+    rel="icon"
+    type="image/png"
+    href="/assets/favicon.ico"
+    sizes="32x32"
+  />
+    <title>Grow Cart Page</title>
+
+
     <link rel="stylesheet" href="../style/navbar.css" />
-    <style>
-      .body {
-        margin: 0px;
-        padding: 0px;
-      }
-      .container {
-        width: 90%;
-        height: auto;
-
-        background-color: white;
-        margin: auto;
-        display: flex;
-        justify-content: space-around;
-        padding: 15px;
-
-        gap: 20px;
-      }
-      .shoppingcart {
-        flex-grow: 5;
-        /* border: 3px solid teal; */
-        position: relative;
-      }
-      .summary {
-        justify-content: space-around;
-        flex-grow: 0.5;
-        /* border: 3px solid yellow; */
-        position: relative;
-        line-height: 30px;
-        border: 1px solid #d3d3d3;
-        padding: 10px;
-        text-align: center;
-        border-radius: 10px;
-        margin-left: 25px;
-      }
-      .summary:hover {
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-      }
-
-      .shoppinggrid {
-        display: grid;
-        grid-template-columns: 20% 75%;
-        /* grid-template-rows: repeat(5, 100px); */
-        gap: 20px;
-      }
-      .shoppinggrid:hover{
-        box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-
-      }
-      .shoppinggrid img {
-        width: 100%;
-        height: 100%;
-      }
-      .shoppinggrid > div {
-        /* border: 3px solid brown; */
-        background-color:white;
-      }
-      .shoppinggrid h2 {
-        margin: 0px;
-        color: #44475b;
-      }
-      .shoppinggrid span {
-        font-size: 22px;
-        line-height: 40px;
-      }
-      .removebtn {
-        border-radius: 2px;
-        /* background-color: #00d09c; */
-        border: none;
-        color: white;
-        width: auto;
-        height: 30px;
-        font-weight: bolder;
-      }
-      .removebtn:hover {
-        font-weight: bolder;
-        zoom:120%;
-      }
-
-      .inc,
-      .dec,
-      .show {
-        font-size: 20px;
-        border-radius: 2px;
-        background-color: #00d09c;
-        margin-left: 15px;
-        border: none;
-        cursor: pointer;
-        color: #44475b;
-      }
-      h3,
-      h2 {
-        color: #44475b;
-        font-size: 25px;
-        margin-left: 25px;
-      }
-      .show {
-        cursor: default;
-      }
-
-      .qnty {
-        margin-left: 120px;
-      }
-      .apply,
-      .proceed {
-        background-color: #00d09c;
-        width: 220px;
-        height: 27px;
-        border-radius: 5px;
-        border: none;
-        color: white;
-      }
-      .proceed:hover,
-      .apply:hover {
-        font-weight: bolder;
-      }
-      .safeimg {
-        width: 70%;
-        filter: grayscale(1);
-
-        cursor: pointer;
-        margin-bottom: 15px;
-      }
-      .safeimg:hover {
-        filter: grayscale(0);
-      }
-    </style>
+    <link rel="stylesheet" href="../style/growcart.css">
+   
   </head>
   <body>
     <!-- ---------------------------------------NavBar start-------------------------------------- -->
