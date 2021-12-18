@@ -734,3 +734,87 @@ border-radius: 5px;
 .wnameP{
     font-size: 14px !important;
 }
+.sideBarClickableDiv{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.UserFirstLetterSideBar{
+    padding: 40%;
+    padding-left: 50%;
+    padding-right: 50%;
+    background-color: rgb(73, 43, 207);
+    border-radius: 50%;
+    color: white;
+}
+
+/* sideBar Start */
+
+.sideBarMainDiv{
+    position: absolute;
+    z-index: 10000000000;
+    height: 480px;
+    width: 350px;
+   background-color: #f7f6f7;
+    right: 6%;
+    top: 14%;
+    /* border: 1px solid lightslategray; */
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+    font-size: 13px !important;
+    display: none;
+}
+.bankpayDiv{
+display: flex;
+align-items: center;
+gap: 4%;
+background-color: white;
+cursor: pointer;
+font-size: 13px !important;
+}
+.fundWatchList{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    font-size: 13px !important;
+}
+.insideDiv{
+    display: flex;
+    align-items: center;
+gap: 4%;
+background-color: white;
+font-size: 13px !important;
+}
+.LoggedUser{
+    display: flex;
+    align-items: center;
+    gap: 10%;
+    margin-left: 5%;
+    font-size: 13px !important;
+}
+.UserFirstLetter{
+    background-color: rgb(73, 43, 207);
+    padding: 80%;
+    padding-left: 110%;
+    padding-right: 110%;
+    border-radius: 50%;
+    color: whitesmoke;
+    font-size: 20px;
+    font-size: 13px !important;
+}
+.userNameEmail p{
+    line-height: 6px;
+    font-size: 13px !important;
+}
+.imgMargin{
+    margin-left: 4%;
+    font-size: 13px !important;
+
+}
+.onhover:hover{
+    background-color: #f7f6f7;
+    cursor: pointer;
+    font-size: 13px !important;
+}
