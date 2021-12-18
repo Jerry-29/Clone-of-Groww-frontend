@@ -726,6 +726,8 @@ let allp=document.querySelectorAll("p")
 console.log(body);
 let changeMode=document.querySelector(".changeMode")
 let Allimg=document.querySelectorAll("img")
+let Allinp=document.querySelectorAll("input")
+let footerDiv=document.querySelector(".footerDiv")
 let dm=0;
 mode.onclick=()=>{
 dm++;
@@ -740,10 +742,11 @@ el.style.backgroundColor="black"
 })
 allp.forEach((el)=>{
 el.style.backgroundColor="black"
+el.style.Color="black"
 })
-// Allimg.forEach((el)=>{
-//     el.style.backgroundColor="black"
-// })
+Allinp.forEach((el)=>{
+    el.style.backgroundColor="black"
+})
 }
 if(dm%2===0){
 changeMode.textContent="Dark Mode"
@@ -757,7 +760,14 @@ el.style.backgroundColor="white"
 allp.forEach((el)=>{
 el.style.backgroundColor="white"
 })
-
+allp.forEach((el)=>{
+    // el.style.backgroundColor="black"
+    el.style.Color="#44475b"
+    })
+Allinp.forEach((el)=>{
+    el.style.backgroundColor="white"
+})
+footerDiv.style.backgroundColor="#1e2232"
 }
 }
 
