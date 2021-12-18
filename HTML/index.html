@@ -99,7 +99,7 @@
                                     <h4 class="nif">NIFTY</h4>
                                     <h4 class="Nsa">NSA</h4>
                                 </div>
-                                <div> <img src="./Images/life1.png" alt=""></div>
+                                <div> <img src="../Images/life1.png" alt=""></div>
                                 <div class="subNiftySensex">
                                     <h4>16,985.20</h4>
                                     <h5 class="red">-263.20(1.53%)</h5>
@@ -111,7 +111,7 @@
                                     <h4 class="nif">SENSEX</h4>
                                     <h4 class="Nsa">BSE</h4>
                                 </div>
-                                <div> <img src="./Images/life1.png" alt=""></div>
+                                <div> <img src="../Images/life2.png" alt=""></div>
                                 <div class="subNiftySensex">
                                     <h4>57,011.74</h4>
                                     <h5 class="red">-889.40(1.54%)</h5>
@@ -1306,7 +1306,7 @@
             "symbol": "RELIANCE.BSE"
         }
     ]
-    let lifeArr = ["./Images/life1.png", "./Images/life2.png"]
+    let lifeArr = ["../Images/life1.png", "../Images/life2.png"]
     let click = 0;
 
     let wlistArr = JSON.parse(localStorage.getItem("WatchListData"))
@@ -1327,7 +1327,7 @@
             let price = document.createElement("p")
             let div = document.createElement("div")
             let clickToAddinWatchList = document.createElement("img")
-            clickToAddinWatchList.src = "./SVG/toadd.svg";
+            clickToAddinWatchList.src = "../SVG/toadd.svg";
             clickToAddinWatchList.style.cursor = "pointer"
 
 
@@ -1344,14 +1344,14 @@
             clickToAddinWatchList.onclick = () => {
                 click++;
                 if (click % 2 !== 0) {
-                    clickToAddinWatchList.src = "./SVG/clicked.svg"
+                    clickToAddinWatchList.src = "../SVG/clicked.svg"
                     wlistArr.push(wData)
                     watchListfunt(wlistArr)
                     localStorage.setItem("WatchListData", JSON.stringify(wlistArr))
 
                 }
 
-                if (click % 2 == 0) { clickToAddinWatchList.src = "./SVG/toadd.svg" }
+                if (click % 2 == 0) { clickToAddinWatchList.src = "../SVG/toadd.svg" }
             }
             div.append(stockName, stockLife, price, clickToAddinWatchList)
 
@@ -1412,7 +1412,7 @@
     showFourBoxData()
 
     let handpickedImgs = document.querySelector(".handpickedImgs")
-    let hpArr = ["./SVG/hp1.svg", "./SVG/hp2.svg", "./SVG/hp3.svg", "./SVG/hp4.svg", "./SVG/hp5.svg", "./SVG/hp6.svg"]
+    let hpArr = ["../SVG/hp1.svg", "../SVG/hp2.svg", "../SVG/hp3.svg", "../SVG/hp4.svg", "../SVG/hp5.svg", "../SVG/hp6.svg"]
     let hptext = ["HIGH RETURN", "TAX SAVING", "BETTER THAN FD", 'TOP COMPANIES', 'SIP WITH ₹500', 'SECTOR BETS']
 
     hpArr.forEach((im, tx) => {

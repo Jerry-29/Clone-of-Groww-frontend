@@ -1,4 +1,12 @@
-
+/* *{
+    border: 1px solid blue;
+} */
+html,body{
+    max-width: 100%;
+    margin: 0%;
+    padding: 0%;
+    overflow-x: hidden;
+}
 #nav-bar{
     /* border: 1px solid black; */
     width: 1140px;
@@ -454,7 +462,7 @@ border-radius: 5px;
 .videosfromGrowDiv p{
     padding: 4%;
     margin-top: 0;
-    width: 92%;
+    width: 90%;
     font-size: 14px !important;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -465,7 +473,7 @@ border-radius: 5px;
     background-color: #f0ebf0;
     padding: 4%;
     margin-top: 8%;
-    width: 96%;
+    width: 92%;
     border-radius: 5px;
 }
 
@@ -764,7 +772,7 @@ border-radius: 5px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    gap: 1%;
+    gap: 1.5%;
     font-size: 13px !important;
     display: none;
 }
