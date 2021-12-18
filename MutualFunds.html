@@ -143,7 +143,7 @@
                 <div id="All-MFs">
                     <p>All Mutual Funds</p>
                    <div>
-                       <select onchange="myFunction()">
+                       <select id="item_select" onchange="myFunction()">
                            <option> Reference</option>
                            <option value="rates">Ratings - High To Low</option>
                            <option value="returns">Returns - High To Low</option>
@@ -737,10 +737,26 @@
   showdata();
 
   function myFunction(){
-    let element = array.sort(function (a,b){
-      return  b.rating - a.rating;
-    })
-    console.log(element);
+    let val = document.getElementById("item_select").value;
+    if(val == "rates"){
+      // console.log('val:', val)
+      array.sort(function (a,b){
+        return  b.rating - a.rating;
+      })
+      let element = document.querySelector(".All-funds");
+      element.innerHTML = " ";
+      showdata();
+    }
+
+    if(val == "returns"){
+      array.sort(function (a,b){
+        return  b.return_percentage - a.return_percentage;
+      })
+      
+      let element = document.querySelector(".All-funds");
+      element.innerHTML = " ";
+      showdata();
+    }
   }
 
     
