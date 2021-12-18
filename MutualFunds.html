@@ -648,9 +648,15 @@
     }
   ]
 
+  let information =  [];
   function showdata(){
     array.forEach((product) => {
+
+      information.push(product);
+      localStorage.setItem("MF_info",JSON.stringify(information))
+      //   console.log('product:', product)
         let box = document.querySelector(".All-funds");
+
 
         let div = document.createElement("div");
         div.setAttribute("class","MFs")
@@ -758,6 +764,5 @@
       showdata();
     }
   }
-
-    
+     
 </script>
