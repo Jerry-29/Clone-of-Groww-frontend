@@ -143,10 +143,10 @@
                 <div id="All-MFs">
                     <p>All Mutual Funds</p>
                    <div>
-                       <select>
+                       <select onchange="myFunction()">
                            <option> Reference</option>
-                           <option>Ratings - High To Low</option>
-                           <option>Returns - High To Low</option>
+                           <option value="rates">Ratings - High To Low</option>
+                           <option value="returns">Returns - High To Low</option>
                        </select>
                    </div>
                 </div>
@@ -668,7 +668,7 @@
         let h_6 = document.createElement("h5");
         p1.innerText = product.product_name;
         p1.style.marginBottom = "0px"
-        h_6.innerHTML = product.risk + " " + product.category + "&#9733 " +  product.rating
+        h_6.innerHTML = product.risk + "&nbsp&nbsp;&#8226;&nbsp;&nbsp" + product.category + "&nbsp;&nbsp;&#8226;&nbsp;&nbsp;" +  product.rating +  "&nbsp;&#9733;";
         h_6.style.marginBottom = "0px";
         div1.append(p1,h_6);
 
@@ -726,11 +726,22 @@
         div_main.append(div1,div2_A);
 
         let end = document.createElement("hr");
+        // end.style.backgroundColor = "red";
+        end.style.border = "1px solid #DCDCDC";
 
         div.append(img,div_main);
         box.append(div,end);
     })
   }
     
-    showdata();
+  showdata();
+
+  function myFunction(){
+    let element = array.sort(function (a,b){
+      return  b.rating - a.rating;
+    })
+    console.log(element);
+  }
+
+    
 </script>
