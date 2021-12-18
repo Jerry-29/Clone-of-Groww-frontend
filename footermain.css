@@ -151,7 +151,7 @@ a {
   font-weight: bold;
   text-transform: UPPERCASE;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 18px;
   letter-spacing: 2px;
   cursor: pointer;
 }
@@ -160,7 +160,7 @@ a {
 }
 .textheader {
   color: white;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: bold;
 }
 #version {
@@ -168,39 +168,39 @@ a {
   margin-left: 70%;
 }
 #first {
-  margin-top: 40px;
+  margin-top: 20px;
   padding-top: 20px;
   /* border: 1px solid red; */
   margin-left: 30px;
   padding-left: 20px;
 }
 #second {
-  margin-top: 40px;
+  margin-top: 20px;
   padding-top: 20px;
   margin-left: 30px;
   padding-left: 20px;
 }
 #third {
-  margin-top: 40px;
+  margin-top: 20px;
   padding-top: 20px;
   margin-left: 30px;
   padding-left: 20px;
 }
 #fourth {
-  margin-top: 40px;
+  margin-top: 20px;
   padding-top: 20px;
   margin-left: 30px;
   padding-left: 20px;
 }
 #fifth {
-  margin-top: 40px;
+  margin-top: 20px;
   padding-top: 20px;
   margin-left: 30px;
   padding-left: 20px;
 }
 #sixth {
   color: #726a6c;
-  margin-top: 40px;
+  margin-top: 20px;
   padding-top: 20px;
   margin-left: 30px;
   padding-left: 20px;
