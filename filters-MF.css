@@ -1,8 +1,6 @@
 #nav-bar{
-    /* border: 1px solid black; */
     width: 1100px;
     display: flex;
-    /* justify-content: space-between; */
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     margin-top: 50px;
@@ -28,9 +26,6 @@
 #search > img{
     width: 20px;
     height: 20px;
-    /* border: 1px solid red; */
-    /* margin-top: 10px; */
-    /* padding: 5px 0; */
     margin-right: 10px;
 }
 
@@ -43,7 +38,7 @@
 
 #search{
     width: 400px;
-    /* border: 1px solid red; */
+    
     height: 30px;
     padding: 5px 15px;
     border-radius: 10px;
@@ -62,13 +57,11 @@
 
 #three-div > img:nth-child(3){
     width: 27px;
-    /* margin-top: 20px; */
 }
 
 .margin-mid{
     width: 1100px;
     margin: auto;
-    /* border: 1px solid blue; */
     display: grid;
     grid-template-columns: 65% 30%;
     font-family: 'Roboto', sans-serif;
@@ -79,7 +72,6 @@
     grid-template-columns: 26% 70%;
     gap: 3%;
     width: 1100px;
-    /* border: 1px solid black; */
     margin: auto;
     font-family: 'Roboto', sans-serif;
     margin-top: 50px;
@@ -88,11 +80,13 @@
 #left-part{
     display: flex;
     justify-content: space-between;
-    /* padding: 0; */
 }
 #left-part > h4{
     margin: 0 0;
 }
+#left-part > h4:nth-child(1){
+    font-size: 15px;
+} 
 #left-part > h4:nth-child(2){
     color: #00d09c;
     font-size: 14px;
@@ -103,7 +97,6 @@
 }
 
 .Everybox{
-    /* border: 1px solid red; */
     padding: 15px 12px 5px;
 }
 li{
@@ -130,7 +123,7 @@ ul{
     font-weight: 500;
 }
 #Fund-list{
-    /* border: 1px solid blue; */
+    
     height: 200px;
     overflow: hidden;
     overflow-y: scroll;
@@ -167,7 +160,9 @@ select{
 }
 .MFs > img{
     width: 30px;
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-left: 15px;
+
 }
 
 .All-inline{
@@ -175,8 +170,14 @@ select{
     grid-template-columns: 68% 29%;
     gap: 3%;
 }
+.All-inline > div{
+    padding: 10px 5px 10px 15px;
+
+}
 .All-inline > div > p{
     margin-bottom: 0px;
+    font-weight: 500;
+    font-size: 15px;
 
 }
 .All-inline > div > h5{
@@ -185,5 +186,8 @@ select{
 }
 .Yrs_cols{
     display: flex;
-   /* gap: 30px; */
+}
+.Yrs_cols > p{
+   font-weight: 500;
+   font-size: 15px;
 }
