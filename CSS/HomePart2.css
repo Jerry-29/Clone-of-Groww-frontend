@@ -1,12 +1,17 @@
 *{
-    font-family: Roboto ,sstem-ui;
+    font-family: Roboto, system-ui;
+    color: #44475b;
+    
+  
+    line-height: 25px;
+    letter-spacing: 0.2px;
 }
 .part2{
     /* padding-left: 6%;
     padding-right: 6%; */
 }
 .yourMoneyYourChoice{
-    color: #1e1f25;
+    color: #44475b;
     font-weight: 600;
     font-size: 36px;
     padding-left: 6%;
@@ -29,7 +34,7 @@
 }
 .stockView>p span{
   font-size: 22px;
-  color: #212131;
+  color: #44475b;
   font-weight: 600;
 }
 .clicKtoChangeTypeOfshareDiv img{
@@ -57,7 +62,7 @@
 .CreateAccountForFree{
     padding:2%;
     background-color: #00d09c;
-    color: #000000;
+    color: white;
     font-weight: 700;
     font-size: 16px;
     border: none;
@@ -72,4 +77,5 @@
 .clickTOchange{
     /* border-bottom: 2px solid #00d09c; */
    caret-color: white;
+ 
 }
