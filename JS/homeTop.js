@@ -109,4 +109,8 @@ async function loginFn(e) {
   }
 }
 
+document.getElementById("mfdiv").onclick=()=>{
+  window.location.href="../HTML_pages/Home.html"
+}
+
 //login validation js finishes here -----------=

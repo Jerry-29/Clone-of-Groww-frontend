@@ -1,5 +1,5 @@
 document.querySelector(".goHomeOnClickLogo").onclick=()=>{
-    window.location.href="../HTML_pages/Home.html"
+    window.location.href="../Grow_Home_page.html"
 }
 
 let watchMasterList = [
@@ -845,6 +845,9 @@ for(var z=0;z<kim;z++){
 //console.log(st);
 UserName.textContent=(st.join("")).toUpperCase()
 
-
+// document.getElementById("groww-logo").onclick=()=>{
+//     window.location.href = "../Grow_Home_page.html";
+//   }
+  
 
 

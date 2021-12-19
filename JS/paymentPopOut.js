@@ -36,5 +36,5 @@ function changeBg(){
 document.querySelector(".depositBt").onclick=()=>{
     alert("Your Payment has been succesfully processed")
 
-    window.location.href="../Grow_Home_page.html"
+    window.location.href="../HTML_pages/Home.html"
 }

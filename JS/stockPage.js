@@ -238,3 +238,10 @@ document.getElementById("ac-btn").onclick = () => {
 document.getElementById("sip-btn").onclick=()=>{
     window.location.href = "Grow_cart_page.html";
 }
+
+
+document.getElementById("groww-logo").onclick=()=>{
+  window.location.href = "../Grow_Home_page.html";
+}
+
+
