@@ -251,9 +251,7 @@ body {
   box-shadow: 3px 6px 24px rgba(0, 0, 0, 0.1);
   border: 1px solid transparent;
 }
-.mfDiv {
-  /* box-shadow: 3px 6px 24px rgba(0, 0, 0, 0.1); */
-}
+
 .rightStock > div > h3 {
   font-weight: 600;
   margin-left: 5%;
