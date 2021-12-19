@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon-32x32-groww.ico"
+      sizes="32x32"
+    />
+    <title>
+      Groww - Online Demat, Trading and Direct Mutual Fund Investment in India
+    </title>
+    <link rel="stylesheet" href="stockPage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="navDiv" id="navDiv"></div>
+    <div class="cont">
+      <div class="leftCont">
+        <div class="logoDiv">
+          <img src="" alt="" id="logoImg" />
+        </div>
+        <div class="titleDiv">
+          <h2 id="pro-title">ICICI Prudential Technology Direct Plan Growth</h2>
+        </div>
+        <div class="chartDiv">
+          <canvas id="myChart"></canvas>
+          <div class="stk-btnDiv">
+            <button>1M</button>
+            <button>6M</button>
+            <button>All</button>
+          </div>
+        </div>
+        <div class="stk-info">
+          <div>
+            <p class="stk-title">NAV As Of Now</p>
+            <p class="stk-amt" id="nav-amt">&#8377;149</p>
+          </div>
+          <div>
+            <p class="stk-title">Rating</p>
+            <p class="stk-amt" id="rating">NA</p>
+          </div>
+          <div>
+            <p class="stk-title">Min. SIP amount</p>
+            <p class="stk-amt" id="sip-amt">&#8377;100</p>
+          </div>
+          <div>
+            <p class="stk-title">Fund Size</p>
+            <p class="stk-amt" id="fund-amt">&#8377;1000cr</p>
+          </div>
+        </div>
+      </div>
+      <div class="rightCont">
+        <div class="headBox">
+          <div class="month-btn" id="month-btn">MONTHLY-SIP</div>
+          <div class="oneTime-btn" id="oneTime-btn">ONE-TIME</div>
+        </div>
+        <div class="inputDiv" id="input-Div">
+          <div class="input-one">
+            <div class="amt-title">SIP Amount</div>
+            <div class="input-amt" id="input-amt">
+              <div id="divvi" class="divvi">
+                &#8377;
+                <input
+                  type="text"
+                  name=""
+                  id="given-amt"
+                  class="amt-input"
+                  placeholder="0"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="input-two">
+            <div class="amt-title">Monthly SIP Date</div>
+            <div class="input-amt">
+              <div id="divvi" class="divvi">
+                <i class="fa fa-calendar"></i>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  class="amt-input"
+                  placeholder="24th"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="walletDiv">
+          <h4>Balance Available</h4>
+          <h4><i class="fa fa-credit-card-alt"></i> &#8377;0.00</h4>
+        </div>
+        <div class="btnDiv1" id="btnDiv1">
+          <button id="ac-btn">ADD TO CART</button>
+          <button id="sip-btn">START SIP</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script type="module" src="stockPage.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
