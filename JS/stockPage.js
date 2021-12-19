@@ -1,4 +1,4 @@
-import navbar from "./scripts/navbar.js";
+import navbar from "../JS/navbar.js";
 
 const navDiv = document.getElementById("navDiv");
 
@@ -20,8 +20,7 @@ navDiv.innerHTML = navbar();
 //   symbol: "000002.SHZ",
 // };
 
-const product=JSON.parse(localStorage.getItem("productData"));
- 
+const product = JSON.parse(localStorage.getItem("productData"));
 
 //  graph generation starts below------------------------
 
@@ -214,24 +213,23 @@ function monthSip() {
   greenInput.style.height = "35%";
 }
 
-
-document.getElementById("ac-btn").onclick=()=>{
-
-  let price= document.getElementById("given-amt").value
-  let cartArr=[];
-  const pro= {
-    name:product.product_name,
-    logo:product.product_image,
-    rating:product.rating,
-    nav:product.nav,
-    category:product.category,
-    fundSize:product.fund_size,
+document.getElementById("ac-btn").onclick = () => {
+  let price = document.getElementById("given-amt").value;
+  let cartArr = [];
+  const pro = {
+    name: product.product_name,
+    logo: product.product_image,
+    rating: product.rating,
+    nav: product.nav,
+    category: product.category,
+    fundSize: product.fund_size,
     price: price,
-  }
+  };
   // console.log(price)
 
-  cartArr.push(pro)
-  alert("Successfully Added To Cart")
+  cartArr.push(pro);
+  alert("Successfully Added To Cart");
 
-  localStorage.setItem("cartData", JSON.stringify(cartArr))
-}
+  localStorage.setItem("cartData", JSON.stringify(cartArr));
+  window.location.href = "Grow_cart_page.html";
+};

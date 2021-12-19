@@ -95,7 +95,7 @@
   // let navBar=document.getElementById("navBar")
   // navBar.innerHTML=navbar();
 
-  var cartData = JSON.parse(localStorage.getItem("cartItems")) || [];
+  var cartData = JSON.parse(localStorage.getItem("cartData")) || [];
   var sub = document.getElementById("subtotal");
   var sum = carttotalprice(cartData);
   sub.textContent = sum;
@@ -111,7 +111,7 @@
       var head = document.createElement("h2");
       head.textContent = item.name;
       var sp1 = document.createElement("span");
-      sp1.textContent = "Amount: ₹" + item.mrp;
+      sp1.textContent = "Amount: ₹" + item.price;
       var br1 = document.createElement("br");
 
       var sp3 = document.createElement("span");
@@ -131,7 +131,7 @@
       div2.append(head, sp1, br1, sp3, b1, b2, b3, br);
 
       var div1 = document.createElement("div");
-      div1.innerHTML = `<img src=${item.url1}>`;
+      div1.innerHTML = `<img src=${item.logo}>`;
 
       sh.append(div1);
       sh.append(div2);
@@ -149,7 +149,7 @@
         localStorage.setItem("cartItems", JSON.stringify(cartData));
         var sub = document.getElementById("subtotal");
         var t = +sub.textContent;
-        sub.textContent = t - item.mrp;
+        sub.textContent = t - Number(item.price);
         display(cartData);
       });
       var counter = 1;
@@ -159,13 +159,13 @@
           return;
         }
         counter++;
-        var price = counter * item.mrp;
+        var price = counter *Number(item.price);
 
         sp1.textContent = "Amount: ₹" + price;
         b2.textContent = counter;
         var sub = document.getElementById("subtotal");
         var t = +sub.textContent;
-        sub.textContent = t + item.mrp;
+        sub.textContent = t + Number(item.price);
       });
       b3.addEventListener("click", function () {
         counter = +b2.textContent;
@@ -173,22 +173,22 @@
           return;
         }
         counter--;
-        var price = counter * item.mrp;
+        var price = counter * Number(item.price);
         sp1.textContent = "Price: ₹" + price;
 
         b2.textContent = counter;
 
         var sub = document.getElementById("subtotal");
         var t = +sub.textContent;
-        sub.textContent = t - item.mrp;
+        sub.textContent = t - Number(item.price);
       });
     });
   }
 
   function carttotalprice(arr) {
     var total = arr.reduce(function (a, item) {
-      return (a += item.mrp);
-    });
+      return a + Number(item.price);
+    },0);
     return total;
   }
 

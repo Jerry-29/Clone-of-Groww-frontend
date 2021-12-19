@@ -121,11 +121,13 @@ body {
 .rightCont {
   display: inline-block;
   width: 25%;
-  position: fixed;
+  position: sticky;
   left: 62%;
-  height: 58%;
+  height: 450px;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* margin-top: 300px; */
+  bottom: 20%;
 }
 
 .logoDiv {
