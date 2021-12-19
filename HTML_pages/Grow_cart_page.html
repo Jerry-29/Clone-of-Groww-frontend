@@ -188,8 +188,9 @@
       });
       var counter = 1;
       b1.addEventListener("click", function () {
-        if (counter > 2) {
+        if (counter >=2) {
           alert("Maximum 2 Quantity Allowed Per Item");
+          counter=2
           return;
         }
         counter++;
