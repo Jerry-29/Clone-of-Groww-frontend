@@ -151,6 +151,7 @@ select{
     grid-template-columns: 5% 90%;
     gap: 1%;
     padding: 5px 15px;
+    cursor: pointer;
 }
 .MFs:hover{
     -ms-transform: scale(1.5); /* IE 9 */

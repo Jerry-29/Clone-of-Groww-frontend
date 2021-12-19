@@ -648,18 +648,20 @@
     }
   ]
 
-  let information =  [];
+  // let information =  [];
   function showdata(){
     array.forEach((product) => {
-
-      information.push(product);
-      localStorage.setItem("MF_info",JSON.stringify(information))
+      
       //   console.log('product:', product)
         let box = document.querySelector(".All-funds");
 
 
         let div = document.createElement("div");
-        div.setAttribute("class","MFs")
+        div.setAttribute("class","MFs");
+        div.addEventListener("click",function(){
+          console.log(product);
+          addItems(product);
+        })
 
         let url = product.product_image;
         let img = document.createElement("img");
@@ -737,11 +739,23 @@
         end.style.border = "1px solid #DCDCDC";
 
         div.append(img,div_main);
+        // const element = document.querySelector(".MFs");
+        // element.addEventListener("click", () => {
+	      //   console.log("clicked element");
+        // });
+
         box.append(div,end);
     })
   }
     
   showdata();
+
+  function addItems(product){
+    // information.push(product);
+    
+    localStorage.setItem("productData",JSON.stringify(product));
+     
+  }
 
   function myFunction(){
     let val = document.getElementById("item_select").value;
