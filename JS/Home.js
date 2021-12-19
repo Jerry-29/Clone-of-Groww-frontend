@@ -623,20 +623,33 @@ function showStack(data) {
 
 let watchListData = document.querySelector(".watchListDataapnd")
 
+
 let dwb = JSON.parse(localStorage.getItem("WatchListData"))
 
+let flArr=[3,2,2.3,2.4,4,3.1,2.4,3.2,3.9,1.99,.90,3,3.2,3.01]
+let frArr=[.12,.13,.06,.7,.01,.22,.112,.26,.11,.10]
 function watchListfunt(dwb) {
 
     dwb.forEach((elm) => {
-        watchListData.innerHTML = ""
+        watchListData.textContent = ""
         let wdiv = document.createElement("div")
         wdiv.style.display = "flex"
         let wname = document.createElement("p")
         wname.setAttribute("class", "wnameP")
+        wname.style.marginLeft="4%"
+
+        let flData=document.createElement("p")
+        flData.textContent=`-${flArr[Math.floor(Math.random()*14)]}(${frArr[Math.floor(Math.random()*9)]+"%"})`
+
         let wprice = document.createElement("p")
         wprice.setAttribute("class", "wnameP")
         wname.textContent = elm.stockName;
-        wprice.textContent = "₹" + ((elm.price) * 30).toFixed(2)
+        wprice.textContent = "₹" + (((elm.price) * 30)*frArr[Math.floor(Math.random()*9)]).toFixed(2)
+      
+        flData.style.color="red"
+        wprice.append(flData)
+        wprice.style.display="flex"
+        wprice.style.flexDirection="column"
         wdiv.append(wname, wprice)
         watchListData.append(wdiv)
         console.log("miimikmnkm");
@@ -644,12 +657,31 @@ function watchListfunt(dwb) {
 } watchListfunt(dwb)
 
 
+setInterval(() => {
+    watchListfunt(dwb)
+}, 1000);
+
+if(localStorage.getItem("productData")===null){
+    localStorage.setItem("productData",JSON.stringify([]))
+}
+
+let DataFetch=JSON.parse(localStorage.getItem("productData"))
+
+
 let four_box = document.querySelector("#four_box")
 let four_box_data = data.slice(0, 4)
 function showFourBoxData() {
     four_box_data.forEach((element, index) => {
 
+
+
         let div = document.createElement("div")
+        div.onclick=()=>{
+
+            DataFetch.push(element)
+            localStorage.setItem("productData",JSON.stringify(DataFetch))
+
+        }
         div.setAttribute("class", "box shadow")
         let boxImg = document.createElement("img")
         let yearlyData = document.createElement("p")
