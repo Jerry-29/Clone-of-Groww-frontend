@@ -32,3 +32,9 @@ function changeBg(){
     withdrawBtn.style.backgroundColor="#00d09c"
     withdrawBtn.style.opacity="1"
 }
+
+document.querySelector(".depositBt").onclick=()=>{
+    alert("Your Payment has been succesfully processed")
+
+    window.location.href="../Grow_Home_page.html"
+}

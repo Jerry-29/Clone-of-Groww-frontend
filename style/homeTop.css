@@ -38,6 +38,9 @@ body {
   display: flex;
   justify-content: center;
 }
+#imph1 {
+  color: white;
+}
 .main {
   /* border:1px solid red; */
   width: 85%;
@@ -272,13 +275,16 @@ body {
 .left_modal {
   height: 100%;
   width: 50%;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   border-radius: 10px 0px 0px 10px;
   background: url("../assets/modalSvg.svg");
+  background-size: 200%;
   color: white !important;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: 1px solid transparent;
+  background-position-y: -100%;
 }
 
 .leftTitle {
@@ -287,14 +293,16 @@ body {
   margin-top: 15%;
   padding-left: 6%;
   letter-spacing: 2px;
+  color: white !important;
 }
 .leftAnimation {
-  border: 1px solid white;
+  border: 1px solid transparent;
 }
 .right_modal {
   height: 100%;
   width: 50%;
   border-radius: 0px 10px 10px 0px;
+  border: 1px solid transparent;
 }
 .close-btnDiv {
   width: 100%;
