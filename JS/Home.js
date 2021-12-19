@@ -815,3 +815,16 @@ sideBarMainDiv.style.display="flex"
     sideBarMainDiv.style.display="none"
 }
 }
+
+let userId=JSON.parse(localStorage.getItem("userId"))
+//let userId="govindsingh0498@yahoo.com"
+let UserFirstLetterSideBar=document.querySelector(".UserFirstLetterSideBar")
+let UserFirstLetter=document.querySelector(".UserFirstLetter")
+
+let mailId=document.querySelector(".mailId")
+
+mailId.textContent=userId
+
+UsStocksContent.textContent=userId[0]
+UserFirstLetterSideBar.textContent=userId[0]
+
