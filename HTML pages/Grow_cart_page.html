@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="icon"
+    type="image/png"
+    href="/assets/favicon.ico"
+    sizes="32x32"
+  />
+    <title>Grow Cart Page</title>
+
+
+    <link rel="stylesheet" href="../style/navbar.css" />
+    <link rel="stylesheet" href="../style/growcart.css">
+   
+  </head>
+  <body>
+    <!-- ---------------------------------------NavBar start-------------------------------------- -->
+    <div id="navBar">
+      <div id="nav-bar" class="margin-mid">
+        <div id="groww-logo">
+          <a href=""
+            ><img
+              style="cursor: pointer"
+              src="https://assets-netstorage.groww.in/web-assets/billion_groww_desktop/prod/build/client/images/logo-dark-groww.83f43714.svg"
+              alt="Groww image"
+          /></a>
+        </div>
+        <div id="after_logo">
+          <p style="cursor: pointer">Explore</p>
+          <p style="cursor: pointer">Investments</p>
+        </div>
+        <div id="search">
+          <img
+            style="cursor: pointer"
+            src="https://www.fabindia.com/file/general/icon-search-black.svg"
+            alt=""
+          />
+          <input
+            type="text"
+            placeholder="What you are looking for today?"
+            id="sea"
+          />
+        </div>
+        <div id="three-div">
+          <img
+            style="cursor: pointer"
+            src="https://cdn-icons-png.flaticon.com/128/3602/3602145.png"
+            alt=""
+          />
+          <img
+            style="cursor: pointer"
+            src="https://img.icons8.com/ios/2x/wallet.png"
+            alt=""
+          />
+          <img
+            style="cursor: pointer"
+            src="https://cdn-icons.flaticon.com/png/128/2252/premium/2252291.png?token=exp=1639483415~hmac=1364994abc22dcae9ce2f747eba82ff2"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <!-- -------------------------------------NavBar end------------------------------------------------------- -->
+    <div class="container">
+      <div class="shoppingcart">
+        <h2 style="margin-bottom: 5px">My Cart</h2>
+        <hr style="width: 90%; text-align: left; margin-left: 25px" />
+        <div class="shoppinggrid"></div>
+      </div>
+      <div class="summary">
+        <!-- <hr style="width: 90%; text-align: left; margin-left: 0" /> -->
+        <span style="color: #44475b; font-size: 25px">
+          <h3>Amount Payble now</h3>
+          ₹
+        </span>
+        <span id="subtotal"></span>
+        <!-- <hr style="width: 90%; text-align: left; margin-left: 0" /> -->
+        <br />
+        <img class="safeimg" src="mainpage\safecart.JPG" alt="" />
+        <br />
+        <button class="proceed" onclick="signup()">Proceed to Pay</button>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script type="module">
+  // import navbar from "/Navbar.js"
+  // console.log(navbar)
+
+  // let navBar=document.getElementById("navBar")
+  // navBar.innerHTML=navbar();
+
+  var cartData = JSON.parse(localStorage.getItem("cartItems")) || [];
+  var sub = document.getElementById("subtotal");
+  var sum = carttotalprice(cartData);
+  sub.textContent = sum;
+
+  var sh = document.querySelector(".shoppinggrid");
+  var len = cartData.length;
+  sh.style = `grid-template-rows: repeat(${len}, 150px)`;
+  display(cartData);
+  function display(arr) {
+    sh.innerHTML = "";
+    arr.map(function (item) {
+      var div2 = document.createElement("div");
+      var head = document.createElement("h2");
+      head.textContent = item.name;
+      var sp1 = document.createElement("span");
+      sp1.textContent = "Amount: ₹" + item.mrp;
+      var br1 = document.createElement("br");
+
+      var sp3 = document.createElement("span");
+      sp3.setAttribute("class", "qnty");
+      sp3.textContent = "Quantity";
+
+      var b1 = document.createElement("button");
+      b1.setAttribute("class", "inc");
+      b1.textContent = "+";
+      var b2 = document.createElement("button");
+      b2.setAttribute("class", "show");
+      b2.textContent = "1";
+      var b3 = document.createElement("button");
+      b3.setAttribute("class", "inc");
+      b3.textContent = "-";
+      var br = document.createElement("br");
+      div2.append(head, sp1, br1, sp3, b1, b2, b3, br);
+
+      var div1 = document.createElement("div");
+      div1.innerHTML = `<img src=${item.url1}>`;
+
+      sh.append(div1);
+      sh.append(div2);
+      var btn = document.createElement("button");
+      btn.setAttribute("class", "removebtn");
+      btn.innerHTML = `<img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/lg/307/wastebasket_1f5d1-fe0f.png" alt="" class="src">`;
+      div2.append(btn);
+
+      btn.addEventListener("click", function () {
+        for (var i = 0; i < cartData.length; i++) {
+          if (cartData[i] == item) {
+            cartData.splice(i, 1);
+          }
+        }
+        localStorage.setItem("cartItems", JSON.stringify(cartData));
+        var sub = document.getElementById("subtotal");
+        var t = +sub.textContent;
+        sub.textContent = t - item.mrp;
+        display(cartData);
+      });
+      var counter = 1;
+      b1.addEventListener("click", function () {
+        if (counter > 2) {
+          alert("Maximum 2 Quantity Allowed Per Item");
+          return;
+        }
+        counter++;
+        var price = counter * item.mrp;
+
+        sp1.textContent = "Amount: ₹" + price;
+        b2.textContent = counter;
+        var sub = document.getElementById("subtotal");
+        var t = +sub.textContent;
+        sub.textContent = t + item.mrp;
+      });
+      b3.addEventListener("click", function () {
+        counter = +b2.textContent;
+        if (counter < 2) {
+          return;
+        }
+        counter--;
+        var price = counter * item.mrp;
+        sp1.textContent = "Price: ₹" + price;
+
+        b2.textContent = counter;
+
+        var sub = document.getElementById("subtotal");
+        var t = +sub.textContent;
+        sub.textContent = t - item.mrp;
+      });
+    });
+  }
+
+  function carttotalprice(arr) {
+    var total = arr.reduce(function (a, item) {
+      return (a += item.mrp);
+    });
+    return total;
+  }
+
+  function signup() {
+    var sub = document.getElementById("subtotal").textContent;
+
+    localStorage.setItem("total_payment", sub);
+    window.location.href = "";
+  }
+</script>
