@@ -1,3 +1,7 @@
+document.querySelector(".goHomeOnClickLogo").onclick=()=>{
+    window.location.href="../HTML_pages/Home.html"
+}
+
 let watchMasterList = [
     {
         "stockName": "ICICI Prudential Technology",
