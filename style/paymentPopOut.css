@@ -11,11 +11,13 @@ background-color: blue;
     height: 400px;
     width: 320px;
     z-index: 1;
-    left: 58%;
-    top: 10%;
+    left: 40%;
+    top: 19%;
    background-color: white;
+   visibility: hidden;
     
 }
+
 .popConatinerOnPaymentPageMainHead{
     display: flex;
     gap: 4%;

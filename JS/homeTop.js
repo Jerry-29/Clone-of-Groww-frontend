@@ -99,7 +99,11 @@ async function loginFn(e) {
               otp_validation.style.opacity="1"
               return;
           }
+          var user=email_input.value
+          localStorage.setItem("userId",JSON.stringify(user))
               alert("Login Success!")
+
+              window.location.href="../HTML_pages/Home.html"
         })
     }
   }
