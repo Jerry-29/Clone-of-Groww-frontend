@@ -4,7 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="../assets/favicon.ico"
+      sizes="32x32"
+    />
+    <title>
+      Groww - Online Demat, Trading and Direct Mutual Fund Investment in India
+    </title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -153,7 +161,7 @@
           <div id="All-MFs">
             <p>All Mutual Funds</p>
             <div>
-              <select id="item_select" >
+              <select id="item_select">
                 <option>Reference</option>
                 <option value="rates">Ratings - High To Low</option>
                 <option value="returns">Returns - High To Low</option>
@@ -656,16 +664,22 @@
     },
   ];
 
-  let information = [];
+  // let information = [];
   function showdata() {
     array.forEach((product) => {
-      information.push(product);
-      localStorage.setItem("MF_info", JSON.stringify(information));
+      // information.push(product);
+
       //   console.log('product:', product)
       let box = document.querySelector(".All-funds");
 
       let div = document.createElement("div");
       div.setAttribute("class", "MFs");
+      div.style.cursor = "pointer";
+
+      div.addEventListener("click", () => {
+        localStorage.setItem("productData", JSON.stringify(product));
+        window.location.href = "stockPage.html";
+      });
 
       let url = product.product_image;
       let img = document.createElement("img");
@@ -777,7 +791,7 @@
   // }
   // myFunction()
 
-  document.getElementById("item_select").onchange=()=>{
+  document.getElementById("item_select").onchange = () => {
     // console.log("work")
     let val = document.getElementById("item_select").value;
     if (val == "rates") {
@@ -799,5 +813,5 @@
       element.innerHTML = " ";
       showdata();
     }
-  }
+  };
 </script>

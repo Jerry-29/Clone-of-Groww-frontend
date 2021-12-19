@@ -243,7 +243,6 @@ body {
   justify-content: center;
   gap: 20px;
   border: 1px solid transparent;
-
 }
 .rightStock > div {
   height: 90%;
@@ -252,7 +251,7 @@ body {
   box-shadow: 3px 6px 24px rgba(0, 0, 0, 0.1);
   border: 1px solid transparent;
 }
-.mfDiv{
+.mfDiv {
   /* box-shadow: 3px 6px 24px rgba(0, 0, 0, 0.1); */
 }
 .rightStock > div > h3 {
@@ -290,7 +289,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   border: 1px solid transparent;
-  background-position-y: -100%;
+  background-position-y: -110%;
 }
 
 .leftTitle {
