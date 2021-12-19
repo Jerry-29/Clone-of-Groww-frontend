@@ -22,6 +22,7 @@ html,body{
 #groww-logo{
     margin-top: 5px;
     margin-right: 25px;
+    cursor: pointer;
 }
 #groww-logo > img{
     width: 150px;
