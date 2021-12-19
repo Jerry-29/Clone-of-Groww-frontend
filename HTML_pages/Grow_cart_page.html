@@ -144,9 +144,11 @@
         for (var i = 0; i < cartData.length; i++) {
           if (cartData[i] == item) {
             cartData.splice(i, 1);
+            
+
           }
         }
-        localStorage.setItem("cartItems", JSON.stringify(cartData));
+        localStorage.setItem("cartData", JSON.stringify(cartData));
         var sub = document.getElementById("subtotal");
         var t = +sub.textContent;
         sub.textContent = t - Number(item.price);

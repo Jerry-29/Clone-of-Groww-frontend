@@ -154,7 +154,7 @@ function oneTime() {
   btn.style.borderBottom = "3px solid var(--primaryClr)";
 
   let sipBtn = document.getElementById("sip-btn");
-  sipBtn.textContent = "INVEST";
+  sipBtn.textContent = "GO TO CART";
   let btnDiv = document.getElementById("btnDiv1");
   btnDiv.style.top = "38%";
   let greenInput = document.getElementById("divvi");
@@ -205,17 +205,17 @@ function monthSip() {
   btn.style.color = "#44475b";
   btn.style.borderBottom = "3px solid var(--primaryClr)";
   let sipBtn = document.getElementById("sip-btn");
-  sipBtn.textContent = "START SIP";
+  sipBtn.textContent = "GO TO CART";
 
   let btnDiv = document.getElementById("btnDiv1");
   btnDiv.style.top = "26%";
   let greenInput = document.getElementById("divvi");
   greenInput.style.height = "35%";
 }
-
+const cartArr = JSON.parse(localStorage.getItem("cartData")) || []
 document.getElementById("ac-btn").onclick = () => {
   let price = document.getElementById("given-amt").value;
-  let cartArr = [];
+ 
   const pro = {
     name: product.product_name,
     logo: product.product_image,
@@ -228,8 +228,13 @@ document.getElementById("ac-btn").onclick = () => {
   // console.log(price)
 
   cartArr.push(pro);
+  console.log(cartArr)
   alert("Successfully Added To Cart");
 
   localStorage.setItem("cartData", JSON.stringify(cartArr));
-  window.location.href = "Grow_cart_page.html";
+
 };
+
+document.getElementById("sip-btn").onclick=()=>{
+    window.location.href = "Grow_cart_page.html";
+}
