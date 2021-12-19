@@ -30,6 +30,7 @@
   text-align: center;
   border-radius: 10px;
   margin-left: 25px;
+  height: 400px;
 }
 .summary:hover {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
@@ -42,12 +43,10 @@
   grid-template-columns: 10% 75%;
   /* grid-template-rows: repeat(5, 100px); */
   gap: 20px;
-  
-  
 }
-.shoppinggrid:hover {
+/* .shoppinggrid:hover {
  
-}
+} */
 .shoppinggrid img {
   width: 100%;
   height: 100%;
@@ -55,21 +54,21 @@
 .shoppinggrid > div {
   /* border: 3px solid brown; */
   background-color: whitesmoke;
-  height: 150px;
+  height: 200px;
+  height: auto;
   padding: 5px;
   border-radius: 10px;
+  font-size: 20px;
 }
-.shoppinggrid > div:hover{
+.shoppinggrid > div:hover {
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
- 
-
 }
 .shoppinggrid h2 {
   margin: 0px;
   color: #44475b;
 }
 .shoppinggrid span {
-  font-size: 22px;
+  font-size: 20px;
   line-height: 40px;
 }
 .removebtn {
@@ -81,13 +80,11 @@
   height: 30px;
   font-weight: bolder;
   background-color: #00d09c;
-  margin-left: 90%;
-
+  margin-left: 80%;
 }
 .removebtn:hover {
   font-weight: bolder;
   zoom: 120%;
-
 }
 
 .inc,
@@ -103,11 +100,10 @@
   font-weight: bolder;
 }
 
-
 h3,
 h2 {
   color: #44475b;
-  font-size: 25px;
+  font-size: 20px;
   margin-left: 25px;
 }
 .show {
@@ -121,7 +117,7 @@ h2 {
 .proceed {
   background-color: #00d09c;
   width: 220px;
-  height: 27px;
+  height: 50px;
   border-radius: 5px;
   border: none;
   color: white;
