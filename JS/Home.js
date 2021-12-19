@@ -680,6 +680,7 @@ function showFourBoxData() {
 
             // DataFetch.push(element)
             localStorage.setItem("productData",JSON.stringify(element))
+            window.location.href="../HTML_pages/stockPage.html"
 
         }
         div.setAttribute("class", "box shadow")

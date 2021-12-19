@@ -44,6 +44,3 @@ Array.from(clickTOchange)[3].onclick=()=>{
 
 // CreateAccountForFree ...change href 
 
-document.querySelector(".CreateAccountForFree").onclick=()=>{
-    alert("Change Me ....  Line No. 48")
-}
