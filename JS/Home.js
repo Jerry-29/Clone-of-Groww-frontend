@@ -661,11 +661,11 @@ let stopper=setInterval(() => {
     watchListfunt(dwb)
 }, 1000);
 
-if(localStorage.getItem("productData")===null){
-    localStorage.setItem("productData",JSON.stringify([]))
-}
+// if(localStorage.getItem("productData")===null){
+//     localStorage.setItem("productData",JSON.stringify([]))
+// }
 
-let DataFetch=JSON.parse(localStorage.getItem("productData"))
+// let DataFetch=JSON.parse(localStorage.getItem("productData"))
 
 
 let four_box = document.querySelector("#four_box")
@@ -678,8 +678,8 @@ function showFourBoxData() {
         let div = document.createElement("div")
         div.onclick=()=>{
 
-            DataFetch.push(element)
-            localStorage.setItem("productData",JSON.stringify(DataFetch))
+            // DataFetch.push(element)
+            localStorage.setItem("productData",JSON.stringify(element))
 
         }
         div.setAttribute("class", "box shadow")
