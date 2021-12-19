@@ -818,14 +818,29 @@ sideBarMainDiv.style.display="flex"
 }
 
 let userId=JSON.parse(localStorage.getItem("userId"))
-//let userId="govindsingh0498@yahoo.com"
+//let userId="jerry@google.com"
+
 let UserFirstLetterSideBar=document.querySelector(".UserFirstLetterSideBar")
 let UserFirstLetter=document.querySelector(".UserFirstLetter")
-
+let UserName=document.querySelector(".UserName")
 let mailId=document.querySelector(".mailId")
 
 mailId.textContent=userId
 
-UsStocksContent.textContent=userId[0]
-UserFirstLetterSideBar.textContent=userId[0]
+UserFirstLetterSideBar.textContent=userId[0].toUpperCase()
+UserFirstLetter.textContent=userId[0].toUpperCase()
+let s=""
+userId=userId.trim().split("")
+let st=[]
+let kim=userId.indexOf("@")
+//console.log(kim);
+//console.log(userId);
+for(var z=0;z<kim;z++){
+        st.push(userId[z])
+}
+//console.log(st);
+UserName.textContent=(st.join("")).toUpperCase()
+
+
+
 
