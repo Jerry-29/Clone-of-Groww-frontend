@@ -657,7 +657,7 @@ function watchListfunt(dwb) {
 } watchListfunt(dwb)
 
 
-setInterval(() => {
+let stopper=setInterval(() => {
     watchListfunt(dwb)
 }, 1000);
 
